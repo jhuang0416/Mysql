@@ -180,6 +180,8 @@ Mysqlimport -u root -p --local Southwind /home/jenny/Desktop/Product.tsv
 
 
 
+source /home/jenny/Desktop/Load_products.sql
+
 
 
 
