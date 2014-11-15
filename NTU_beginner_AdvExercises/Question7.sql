@@ -19,12 +19,12 @@ END //
 DELIMITER ;
 
 INSERT INTO Payments (rental_id, amount, mode, type, remark, last_updated_date, last_updated_by, staff_id)
-VALUES (6, 2000.27,'credit card','full','It is great!',
+VALUES (7, 2000.27,'credit card','full','It is great!',
 NOW(),8001,8001); 
 
 SELECT * FROM Payments \G
 
-UPDATE Payments SET amount= '1500.50' WHERE payment_id = 12; 
+UPDATE Payments SET amount= '2000.50' WHERE payment_id = 12; 
 
 SELECT * FROM Payments \G
 
