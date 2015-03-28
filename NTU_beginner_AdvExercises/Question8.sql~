@@ -5,13 +5,13 @@ DELIMITER //
 CREATE TRIGGER staff_handled BEFORE INSERT ON rental_records
 FOR EACH ROW
 BEGIN
-SET NEW.staff_id = (SELECT staff_id FROM staff WHERE User = (SELECT Current_user()));
+SET NEW.staff_id = (SELECT staff_id FROM staff WHERE staff.name = '%');
 END //
 
 CREATE TRIGGER staff_handled_Updated BEFORE UPDATE ON rental_records
 FOR EACH ROW
 BEGIN
-SET NEW.staff_id = (SELECT staff_id FROM staff WHERE SELECT Current_user()));
+SET NEW.staff_id = (SELECT staff_id FROM staff WHERE staff.name = '%');
 END //
 
 DELIMITER ;

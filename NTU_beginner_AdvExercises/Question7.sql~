@@ -1,4 +1,4 @@
-/* 7-TRIGGER: Write a trigger for the created_date and created_by columns of the payments table. */
+//* 7-TRIGGER: Write a trigger for the created_date and created_by columns of the payments table. */
 
 DELIMITER //
 
@@ -29,3 +29,4 @@ SELECT * FROM Payments \G
 UPDATE Payments SET amount= '53.27' WHERE payment_id = 8; 
 
 SELECT * FROM Payments \G
+
