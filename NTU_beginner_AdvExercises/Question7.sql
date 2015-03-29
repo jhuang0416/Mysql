@@ -13,8 +13,6 @@ END //
 CREATE TRIGGER Created_Update BEFORE UPDATE ON Payments
 FOR EACH ROW
 BEGIN
-SET NEW.created_by = (SELECT staff_id FROM staff WHERE User = (SELECT Current_user()));
-SET NEW.created_date = NOW();
 SET NEW.last_updated_by = (SELECT staff_id FROM staff WHERE User = (SELECT Current_user()));
 SET NEW.staff_id = (SELECT staff_id FROM staff WHERE User = (SELECT Current_user()));
 END //
@@ -29,3 +27,4 @@ SELECT * FROM Payments \G
 UPDATE Payments SET amount= '53.27' WHERE payment_id = 8; 
 
 SELECT * FROM Payments \G
+
